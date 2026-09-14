@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<title>Ashlesha Meshram — Frontend Developer</title>
+<meta name="description" content="Ashlesha Meshram — Frontend Developer Intern portfolio. HTML, CSS, JavaScript, React." />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Syne:wght@500;600;700;800&family=Unbounded:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Devicon for skill logos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.16.0/devicon.min.css">
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="preloader">
+  <div class="preloader__ring">
+    <svg viewBox="0 0 120 120">
+      <circle class="ring-bg" cx="60" cy="60" r="54"></circle>
+      <circle class="ring-fg" id="ringFg" cx="60" cy="60" r="54"></circle>
+    </svg>
+    <span class="preloader__count"><span id="preloaderCount">0</span>%</span>
+  </div>
+  <p class="preloader__caption">Loading Ashlesha's Portfolio
+    <i class="fa-solid fa-globe" style="color: rgb(11, 238, 238);"></i>
+  </p>
+</div>
+
+<!-- ============ CUSTOM CURSOR GLOW (desktop only, css handles hide on touch) ============ -->
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="siteNav">
+  <a href="#home" class="nav__brand">AM<span class="nav__brand-dot">.</span></a>
+
+  <nav class="nav__links" id="navLinks">
+    <a href="#home" class="nav__link">Home</a>
+    <a href="#about" class="nav__link">About</a>
+    <a href="#skills" class="nav__link">Skills</a>
+    <a href="#achievements" class="nav__link">Achievements</a>
+    <a href="#projects" class="nav__link">Projects</a>
+    <a href="#contact" class="nav__link">Contact</a>
+  </nav>
+
+  <a href="assets/Ashlesha_Meshram_Resume.pdf" download class="nav__cta btn-magnetic">
+    <span>Resume</span>
+  </a>
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">
+    <i class="fa-solid fa-moon" style="color: rgb(255, 255, 255);"></i>
+  </button>
+
+  <button class="nav__burger" id="navBurger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero__blobs" aria-hidden="true">
+      <div class="blob blob--one"></div>
+      <div class="blob blob--two"></div>
+      <div class="blob blob--three"></div>
+      <div class="grid-noise"></div>
+    </div>
+
+    <div class="hero__inner">
+      <div class="hero__text">
+        <p class="hero__hi" data-split>Hey, I'm Ashlesha —</p>
+        <h1 class="hero__title">
+          <span class="hero-title-loop" id="heroTitleLoop" aria-live="polite"></span>
+        </h1>
+        <p class="hero__sub">
+          I turn static designs into interactive, responsive interfaces —
+          built with HTML, CSS, JavaScript &amp; React. Currently hunting for
+          my first <strong>Frontend Development Internship.</strong>
+        </p>
+
+        <p class="hero__pitch">I'm a quick learner who likes figuring things out — I take feedback well, work fine under a deadline, and enjoy the back-and-forth of building something with a team.</p>
+
+        <p class="role-loop-row">
+          <span>Currently coding in</span>
+          <span class="role-loop" aria-live="polite">
+            <span class="role-loop__item" data-state="active">Frontend Dev</span>
+            <span class="role-loop__item" data-state="enter">React.js</span>
+            <span class="role-loop__item" data-state="enter">JavaScript</span>
+          </span>
+        </p>
+
+        <div class="hero__cta-row">
+          <a href="#projects" class="btn btn--solid btn-magnetic"><span>See my work</span></a>
+          <a href="#contact" class="btn btn--ghost btn-magnetic"><span>Let's talk</span></a>
+        </div>
+
+        <ul class="social-rail" aria-label="Social links">
+          <li><a href="https://github.com/ashleshameshram" class="social-chip" data-social="github" aria-label="GitHub" target="_blank" rel="noopener"><i class="devicon-github-original"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/ashlesha-meshram2004/" class="social-chip" data-social="linkedin" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="devicon-linkedin-plain"></i></a></li>
+          <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=ashleshameshram265@gmail.com" class="social-chip" target="_blank" data-social="mail" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a></li>
+        </ul>
+      </div>
+
+      <div class="hero__visual">
+        <div class="orbit-ring" aria-hidden="true">
+          <span class="orbit-chip" style="--i:0"><i class="devicon-html5-plain colored"></i></span>
+          <span class="orbit-chip" style="--i:1"><i class="devicon-css3-plain colored"></i></span>
+          <span class="orbit-chip" style="--i:2"><i class="devicon-javascript-plain colored"></i></span>
+          <span class="orbit-chip" style="--i:3"><i class="devicon-react-original colored"></i></span>
+          <span class="orbit-chip" style="--i:4"><i class="devicon-git-plain colored"></i></span>
+        </div>
+
+        <div class="profile-frame">
+          <!-- Placeholder avatar — swap this src for your own photo later -->
+          <img src="/assets/ashlesha.jpeg"
+               alt="Ashlesha Meshram" class="profile-frame__img" id="profileImg" />
+
+          <div class="open-badge"><span class="availability-dot"></span>Open to work</div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll down">
+      <span class="scroll-cue__line"></span>
+      <span>scroll</span>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="section-head reveal-curtain">
+      <div class="curtain-panel curtain-panel--l"></div>
+      <div class="curtain-panel curtain-panel--r"></div>
+      <span class="section-tag">01 — About</span>
+      <h2 class="section-title">A bit about <span class="text-gradient">myself</span></h2>
+    </div>
+
+    <div class="about__grid">
+      <div class="about__copy reveal-up">
+        <p>
+          I'm a Computer Applications graduate from Nagpur who fell for the
+          moment a static design turns into something you can actually click,
+          scroll and play with. I'm a <strong>frontend developer</strong>
+          learning fast and building often — right now, I work mainly with
+          <strong> HTML5, CSS3, JavaScript and React</strong>, styling with
+          Bootstrap &amp; Material UI, and shipping with Git, GitHub and Vercel.
+        </p>
+        <p>
+          I care about clean interfaces, small interaction details, and
+          closing the gap between a Figma file and real, working code — and
+          I'm on the lookout for a Frontend Development internship where I
+          can keep closing that gap.
+        </p>
+
+        <div class="stat-row">
+          <div class="stat-card reveal-up">
+            <span class="stat-card__num">7.69 / 10</span>
+            <span class="stat-card__label">CGPA, BCA</span>
+          </div>
+          <div class="stat-card reveal-up">
+            <span class="stat-card__num">4</span>
+            <span class="stat-card__label">Projects shipped</span>
+          </div>
+          <div class="stat-card reveal-up">
+            <span class="stat-card__num">Nagpur</span>
+            <span class="stat-card__label">Based in, IN</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__card reveal-up">
+        <div class="about__card-glow" aria-hidden="true"></div>
+        <ul class="timeline-list">
+          <li>
+            <span class="dot"></span>
+            <div>
+              <p class="timeline-title">Bachelor of Computer Applications</p>
+              <p class="timeline-meta">RTM Nagpur University · 2022 – 2025</p>
+            </div>
+          </li>
+          <li>
+            <span class="dot"></span>
+            <div>
+              <p class="timeline-title">Code League 1.0 — Hackathon</p>
+              <p class="timeline-meta">Built an appointment booking UI in an 8‑hr sprint</p>
+            </div>
+          </li>
+          <li>
+            <span class="dot"></span>
+            <div>
+              <p class="timeline-title">Open to work</p>
+              <p class="timeline-meta">Frontend Development Internship</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="skills" id="skills">
+    <div class="section-head reveal-curtain">
+      <div class="curtain-panel curtain-panel--l"></div>
+      <div class="curtain-panel curtain-panel--r"></div>
+      <span class="section-tag">02 — Skills</span>
+      <h2 class="section-title">Tools in my <span class="text-gradient">toolkit</span></h2>
+    </div>
+
+    <!-- Infinite marquee row 1 -->
+    <div class="marquee marquee--left">
+      <div class="marquee__track">
+        <span class="skill-pill"><i class="devicon-html5-plain colored"></i>HTML5</span>
+        <span class="skill-pill"><i class="devicon-css3-plain colored"></i>CSS3</span>
+        <span class="skill-pill"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+        <span class="skill-pill"><i class="devicon-react-original colored"></i>React.js</span>
+        <span class="skill-pill"><i class="devicon-canva-original colored"></i>Canva</span>
+        <span class="skill-pill"><i class="devicon-bootstrap-plain colored"></i>Bootstrap</span>
+        <span class="skill-pill"><i class="devicon-materialui-plain colored"></i>Material UI</span>
+        <span class="skill-pill"><i class="devicon-git-plain colored"></i>Git</span>
+        <span class="skill-pill"><i class="devicon-github-original"></i>GitHub</span>
+        <span class="skill-pill"><i class="devicon-vercel-original"></i>Vercel</span>
+        <!-- duplicate for seamless loop -->
+        <span class="skill-pill"><i class="devicon-html5-plain colored"></i>HTML5</span>
+        <span class="skill-pill"><i class="devicon-css3-plain colored"></i>CSS3</span>
+        <span class="skill-pill"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+        <span class="skill-pill"><i class="devicon-react-original colored"></i>React.js</span>
+        <span class="skill-pill"><i class="devicon-bootstrap-plain colored"></i>Bootstrap</span>
+        <span class="skill-pill"><i class="devicon-materialui-plain colored"></i>Material UI</span>
+        <span class="skill-pill"><i class="devicon-git-plain colored"></i>Git</span>
+        <span class="skill-pill"><i class="devicon-github-original"></i>GitHub</span>
+        <span class="skill-pill"><i class="devicon-vercel-original"></i>Vercel</span>
+        <span class="skill-pill"><i class="devicon-canva-original colored"></i>Canva</span>
+      </div>
+    </div>
+
+    <!-- Infinite marquee row 2, reverse direction -->
+    <div class="marquee marquee--right">
+      <div class="marquee__track">
+        <span class="skill-pill"><i class="devicon-nodejs-plain colored"></i>REST APIs</span>
+        <span class="skill-pill"><i class="devicon-google-plain colored"></i>Gemini API</span>
+        <span class="skill-pill">📱 Responsive Design</span>
+        <span class="skill-pill"><i class="devicon-visualstudio-plain colored"></i>VS Code</span>
+        <span class="skill-pill"><i class="devicon-canva-original colored"></i>Canva</span>
+        <span class="skill-pill"><i class="devicon-nodejs-plain colored"></i>REST APIs</span>
+        <span class="skill-pill"><i class="devicon-google-plain colored"></i>Gemini API</span>
+        <span class="skill-pill">📱 Responsive Design</span>
+        <span class="skill-pill"><i class="devicon-canva-original colored"></i>Canva</span>
+        <span class="skill-pill"><i class="devicon-visualstudio-plain colored"></i>VS Code</span>
+      </div>
+    </div>
+
+    <!-- Skill categories -->
+    <div class="skill-grid">
+      <div class="skill-card reveal-up">
+        <h4>Languages</h4>
+        <ul class="skill-list">
+          <li class="skill-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript (ES6+)</span></li>
+        </ul>
+      </div>
+      <div class="skill-card reveal-up">
+        <h4>Web</h4>
+        <ul class="skill-list">
+          <li class="skill-item"><i class="devicon-html5-plain colored"></i><span>HTML5</span></li>
+          <li class="skill-item"><i class="devicon-css3-plain colored"></i><span>CSS3</span></li>
+          <li class="skill-item"><span class="skill-item__emoji">📱</span><span>Responsive Design</span></li>
+        </ul>
+      </div>
+      <div class="skill-card reveal-up">
+        <h4>Frameworks &amp; Libraries</h4>
+        <ul class="skill-list">
+          <li class="skill-item"><i class="devicon-react-original colored"></i><span>React.js</span></li>
+          <li class="skill-item"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></li>
+          <li class="skill-item"><i class="devicon-materialui-plain colored"></i><span>Material UI</span></li>
+        </ul>
+      </div>
+      <div class="skill-card reveal-up">
+        <h4>Tools &amp; Platforms</h4>
+        <ul class="skill-list">
+          <li class="skill-item"><i class="devicon-git-plain colored"></i><span>Git</span></li>
+          <li class="skill-item"><i class="devicon-github-original"></i><span>GitHub</span></li>
+          <li class="skill-item"><i class="devicon-vercel-original"></i><span>Vercel</span></li>
+        </ul>
+      </div>
+      <div class="skill-card reveal-up">
+        <h4>APIs &amp; Integration</h4>
+        <ul class="skill-list">
+          <li class="skill-item"><i class="devicon-nodejs-plain colored"></i><span>REST APIs</span></li>
+          <li class="skill-item"><i class="devicon-google-plain colored"></i><span>Gemini API</span></li>
+        </ul>
+      </div>
+      <div class="skill-card reveal-up">
+        <h4>Design</h4>
+        <ul class="skill-list">
+          <li class="skill-item"><i class="devicon-canva-original colored"></i><span>Canva</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACHIEVEMENTS ============ -->
+  <section class="achievements" id="achievements">
+    <div class="section-head reveal-curtain">
+      <div class="curtain-panel curtain-panel--l"></div>
+      <div class="curtain-panel curtain-panel--r"></div>
+      <span class="section-tag">04 — Achievements</span>
+      <h2 class="section-title">Achievements &amp; <span class="text-gradient">Recognition</span></h2>
+    </div>
+
+    <div class="achieve-grid">
+      <div class="achieve-card reveal-up">
+        <span class="achieve-card__icon">
+          <i class="fa-solid fa-users" style="color: #36f08d;"></i>
+        </span>
+        <h3>Code League 1.0 — Hackathon</h3>
+        <p class="achieve-card__meta">Intercollegiate Coding Competition · GHRCEM Nagpur · Feb 2026</p>
+        <p>Built the UI and core JavaScript functionality for an Appointment Booking app in an 8-hour team hackathon, using HTML, CSS &amp; JavaScript.</p>
+      </div>
+      <div class="achieve-card reveal-up">
+        <span class="achieve-card__icon">
+          <i class="fa-solid fa-medal" style="color: #3652f0;"></i>
+        </span>
+        <h3>2nd Prize — Technical Presentation</h3>
+        <p class="achieve-card__meta">Dr. S.C. Gulhane Prerna College · Oct 2024</p>
+        <p>Won 2nd prize presenting on the .NET framework as part of a team, at a technical presentation competition.</p>
+      </div>
+      <div class="achieve-card reveal-up">
+        <span class="achieve-card__icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </span>
+        <h3>BCA Graduate</h3>
+        <p class="achieve-card__meta">RTM Nagpur University · 2022 – 2025</p>
+        <p>Completed my Bachelor of Computer Applications with a CGPA of 7.69.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="projects" id="projects">
+    <div class="section-head reveal-curtain">
+      <div class="curtain-panel curtain-panel--l"></div>
+      <div class="curtain-panel curtain-panel--r"></div>
+      <span class="section-tag">05 — Projects</span>
+      <h2 class="section-title">Things I've <span class="text-gradient">built</span></h2>
+    </div>
+
+    <div class="project-grid" id="projectGrid">
+      <div class="project-highlight" id="projectHighlight" aria-hidden="true"></div>
+
+      <article class="project-card swing-reveal">
+        <div class="project-card__inner">
+          <div class="project-card__media">
+            <!-- Placeholder image — swap src for a real screenshot later -->
+            <img src="/assets/AiJobApplication.webp" alt="AI-Powered Job Application Tracker screenshot" loading="lazy" />
+            <span class="project-status">Featured</span>
+          </div>
+          <div class="project-card__body">
+            <h3>AI‑Powered Job Application Tracker</h3>
+            <p>
+              Organize job applications, stages and follow‑ups in one place.
+              Integrated the Gemini API for resume analysis (match score,
+              matched/missing skills, strengths, suggestions) plus AI‑generated
+              interview prep questions and drag‑and‑drop stage tracking across
+              5 hiring stages.
+            </p>
+            <ul class="tag-row">
+              <li>JavaScript</li><li>React</li><li>Material UI</li><li>Gemini API</li><li>Vercel</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://applyiq-ai-job-tracker.vercel.app/" class="link-pill" target="_blank" rel="noopener">Live Demo →</a>
+              <a href="https://github.com/ashleshameshram/Applyiq-AI-Job-Tracker" class="link-pill link-pill--ghost" target="_blank" rel="noopener"><i class="devicon-github-original"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card swing-reveal">
+        <div class="project-card__inner">
+          <div class="project-card__media">
+            <!-- Placeholder image — swap src for a real screenshot later -->
+            <img src="/assets/expense.jpeg" alt="Expense and Saving Tracker screenshot" loading="lazy" />
+            <span class="project-status">Featured</span>
+          </div>
+          <div class="project-card__body">
+            <h3>Expense &amp; Saving Tracker</h3>
+            <p>
+              A personal finance dashboard combining transaction management,
+              savings goals and spending analytics. Supports add / edit /
+              delete / search / filter / sort, with a savings‑insights module
+              and goal‑tracking visualised using Recharts.
+            </p>
+            <ul class="tag-row">
+              <li>JavaScript</li><li>React</li><li>Bootstrap</li><li>Recharts</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://spend-wise-expense-tracker-xi.vercel.app/" class="link-pill" target="_blank" rel="noopener">Live Demo →</a>
+              <a href="https://github.com/ashleshameshram/SpendWise-Expense-Tracker" class="link-pill link-pill--ghost" target="_blank" rel="noopener"><i class="devicon-github-original"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card swing-reveal">
+        <div class="project-card__inner">
+          <div class="project-card__media">
+            <!-- Placeholder image — swap src for a real screenshot later -->
+            <img src="/assets/movie.webp" alt="Movie Search App screenshot" loading="lazy" />
+            <span class="project-status">Practice build</span>
+          </div>
+          <div class="project-card__body">
+            <h3>Movie Search App</h3>
+            <p>
+              A small practice project for sharpening API and DOM skills —
+              search movies by title and browse posters, ratings and details
+              pulled live from a public movie database.
+            </p>
+            <ul class="tag-row">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Movie API</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://cinefind-movie-search.vercel.app/" class="link-pill" target="_blank" rel="noopener">Live Demo →</a>
+              <a href="https://github.com/ashleshameshram/Movie-Search-App" class="link-pill link-pill--ghost" target="_blank" rel="noopener"><i class="devicon-github-original"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card swing-reveal">
+        <div class="project-card__inner">
+          <div class="project-card__media">
+            <!-- Placeholder image — swap src for a real screenshot later -->
+            <img src="/assets/WelcomePortfolio.jpg" alt="Personal portfolio website screenshot" loading="lazy" />
+            <span class="project-status">This site</span>
+          </div>
+          <div class="project-card__body">
+            <h3>Personal Portfolio Website</h3>
+            <p>
+              The site you're on right now — designed and built from scratch
+              with a hand-rolled animation system: scroll-triggered reveals,
+              an infinite skills marquee, a custom text-loop, and a fully
+              responsive layout with no UI framework.
+            </p>
+            <ul class="tag-row">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li>
+            </ul>
+            <div class="project-links">
+              <a href="#" class="link-pill link-pill--ghost" target="_blank" rel="noopener"><i class="devicon-github-original"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="contact__blobs" aria-hidden="true">
+      <div class="blob blob--four"></div>
+    </div>
+
+    <div class="section-head reveal-curtain">
+      <div class="curtain-panel curtain-panel--l"></div>
+      <div class="curtain-panel curtain-panel--r"></div>
+      <span class="section-tag">07 — Contact</span>
+      <div class="contact__panel reveal-up">
+        <h2 class="section-title">Get in <span class="text-gradient">Touch</span></h2>
+        <p class="availability-tag"><span class="availability-dot"></span>Open to work</p>
+        
+        <p class="contact__intro">
+            I'm on the hunt for my first Frontend Development internship — feel free to reach out.
+        </p>
+
+        <div class="contact__pills">
+            <a href="https://github.com/ashleshameshram" target="_blank" class="pill-btn">GitHub</a>
+            <a href="https://www.linkedin.com/in/ashlesha-meshram2004/" class="pill-btn" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ashleshameshram265@gmail.com" class="pill-btn" target="_blank" rel="noopener">Email</a>
+        </div>
+
+        <a href="assets/Ashlesha_Meshram_Resume.pdf" download class="btn btn--solid btn-magnetic"><span>Download Resume</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__brand">
+    <p class="footer__name">Ashlesha Meshram</p>
+    <p class="footer__tag">Frontend Developer · Open to internships</p>
+  </div>
+  <ul class="social-rail">
+    <li><a href="https://github.com/ashleshameshram" aria-label="GitHub" target="_blank" rel="noopener"><i class="devicon-github-original"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/ashlesha-meshram2004/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="devicon-linkedin-plain"></i></a></li>
+    <li><a href="mailto:ashleshameshram265@gmail.com" aria-label="Email">✉</a></li>
+  </ul>
+  <p class="footer__copy">Designed &amp; built from scratch with HTML, CSS &amp; JavaScript 
+    <i class="fa-solid fa-heart" style="color: rgb(255, 0, 0);"></i>
+    — © <span id="year"></span> Ashlesha Meshram</p>
+</footer>
+
+<div class="back-to-top" id="backToTop" role="button" aria-label="Back to top">↑</div>
+
+<script src="script.js"></script>
+</body>
+</html>
